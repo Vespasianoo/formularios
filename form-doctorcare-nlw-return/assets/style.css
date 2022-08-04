@@ -1,0 +1,212 @@
+/*--------------------------- GERAL -----------------*/
+
+
+:root {
+    --brand-green: #00856F;
+    --brand-green-light: #DCE9E2;
+    --brand-green-light-02: #F7F9F9;
+    --brand-beige: #FFFAF1;
+    --brand-green-hover:#00453A;
+    --border-color: #4950574d;
+    --paragraph: #495057;
+    --title: #212529;
+
+    font-size: 62.5%;  /* 1rem = 10px */
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    font-family: "DM sans", sans-serif;
+    font-size: 1.6rem;
+
+    background-color: #fff;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*--------------------------- LEFT e RIGHT -----------------*/
+
+.left {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.right{
+    width: 50%;
+    display: flex;
+}
+
+/*--------------- left ----------- */
+
+.content-left {
+    width: 40.4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-left header h1 {
+    color: var(--title);
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.content-left header {
+    margin-bottom: 4rem;
+    display: flex;
+
+}
+
+/* ---------- left ul ---- */
+
+.content-left ul li {
+    display: flex;
+    gap: 0.8rem;
+
+    margin-bottom: 1.6rem;
+}
+
+.content-left ul li p {
+    color: var(--paragraph);
+    font-family: 700;
+}
+
+
+/* ----------------  right - form ---------------- */
+
+.form {
+    background: var(--brand-green-light-02);
+
+    width: 45.5rem;
+    height: 43.7rem;
+}
+
+form {
+    margin: 4.8rem;
+}
+
+form header {
+    margin-bottom: 3.6rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--title);
+}
+
+/* ------------- input - group- box - label----------*/
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-box {
+    width: 16.9rem;
+
+    display: flex;
+    flex-direction: column;
+    
+    margin-bottom: 1.4rem;
+}
+
+.input-box input {
+    width: 16.936rem;
+    height: 3.387rem;
+
+    border: 1px solid var(--border-color);
+    border-radius: 2.41944px;
+
+    padding-left: 1rem;
+    outline: none;
+
+    background: var(--brand-green-light);
+}
+
+.input-box input:focus {
+    border: 1px solid var(--brand-green);
+}
+
+.input-box label,
+.consul label {
+    margin-bottom: 0.484rem;
+    
+    color: var(--brand-green-hover);
+    font-size: 1rem;
+}
+
+
+/* ---- textarea -------------------------------- */
+
+.consul {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 1.935rem;
+}
+
+.consul textarea {
+    height: 7.1rem;
+
+    border: 1px solid var(--border-color);
+    border-radius: 2.41944px;
+    background: var(--brand-green-light);
+
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+
+    outline: none; 
+}
+
+.consul textarea:focus {
+    border: 1px solid var(--brand-green);
+}
+
+
+/*------------- BTN ----------------*/ 
+
+.btn button {
+    width: 100%;
+
+    color: #fff;
+
+    background: var(--brand-green);
+
+    padding: 1rem 1.5rem;
+
+    cursor: pointer;
+
+    transition: background .2s;
+}
+
+.btn button:hover {
+    background: var(--brand-green-hover);
+}
+
+.btn button:active {
+    opacity: 0.7;
+}

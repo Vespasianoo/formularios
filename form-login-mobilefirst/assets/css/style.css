@@ -1,0 +1,376 @@
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+    --color-button: #473404;
+    --box-shadow: #ffde88;
+
+
+    font-size: 62.5%;  /* 1rem = 10px */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--background);
+ 
+}
+
+/* ------------------ THEME - GREEN -  início--------*/
+
+body.green {
+    --text-base: #F4FFF7;
+    --text-title: #FFF7DC;
+    --background: #1A1919;
+    --form-background: #212121;
+    --primary-color: #41A55B;
+    --color-button: #03310d;
+    --box-shadow: transparent;
+    
+}
+
+/* -------------------  THEME - GREEN --- final ---------*/
+
+.container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+}
+
+/* ---------------- LEFT ------------ MOBILE ---------*/
+
+.left {
+    width: 100%;
+    margin: 4rem 2rem 3rem 2rem;
+}
+
+
+.logo img {
+    width: 11.5rem;
+    height: 2.8rem;
+}
+
+
+.img-title-form-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-top: 3rem;
+}
+
+.img-title-form-header img  {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.img-title-form-header h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--text-title);
+}
+
+.paragraph p {
+    color: var(--text-base);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+
+    margin-top: 0.5rem;
+}
+
+/* ---------------- INPUTS -------------------------*/
+
+.input-group {
+    margin-top: 2.7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box {
+    margin-bottom: 2rem;
+}
+
+.input-box .input-box-focus input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+
+    background: none;
+
+    border: none;
+
+    outline: none;
+
+    color: var(--text-base);
+    font-family: 'Roboto', sans-serif;
+
+    padding: 4rem;
+}
+
+.input-box-focus {
+    display: flex;
+    align-items: center;
+
+    height: 4.4rem;
+
+    border: 1px var(--text-base) solid ;
+    border-radius: 4px;
+
+    margin-top: 0.5rem;
+}
+
+
+.input-box-focus:focus-within {
+    border: 1px var(--primary-color) solid;
+    box-shadow: 0px 0px 0px 2px var(--box-shadow);
+}
+
+#email {
+    background-image: url(../img/mail.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-position-x: 1.2rem;
+}
+
+
+#email:focus {
+    background-image: url(../img/mail-focus.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-position-x: 1.2rem;
+}
+
+#password {
+    background-image: url(../img/lock.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-position-x: 1.2rem;
+}
+
+#password:focus {
+    background-image: url(../img/lock-focus.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-position-x: 1.2rem;
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+
+    margin: 1.2rem;
+}
+
+
+label {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--text-base);
+}
+
+/* ------------------remember - forgot -------------------*/
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 30px;
+}
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+    border: none;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    border: solid 1px var(--text-title);
+    background-color: var(--form-background);
+    margin-top: 2px;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--background);
+    border-radius: 1px;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.remember-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.remember-group label {
+    font-size: 1.6rem;
+    color: var(--text-base);
+    display: flex;
+    align-self: center;
+}
+
+.forgot a{
+    font-weight: 600;
+
+    color: var(--primary-color);
+
+    font-size: 1.4rem;
+
+    transition: filter .2s;
+}
+
+.forgot a:hover {
+    filter: brightness(1.1);
+}
+
+.forgot a:active {
+    opacity: 0.9;
+}
+
+/* -------------- btn - register ------------------*/
+
+.btn-register {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    height: 5.1rem;
+
+    background: var(--primary-color);
+
+    color: var(--color-button);
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition: filter .2s;
+
+    margin-bottom: 1.4rem;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+button:active {
+    opacity: 0.9;
+}
+
+.btn-register a {
+    display: flex;
+    align-self: center;
+
+    color: var(--primary-color);
+}
+
+.btn-register a:hover {
+    filter: brightness(1.1);
+}
+
+.btn-register a:active {
+    opacity: 0.9;
+}
+
+.btn-register a strong {
+    font-weight: 600;
+    margin-left: 0.4rem;
+}
+
+/* ----------------------- Desktop ---------------------- */
+
+
+@media (min-width: 1024px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .container {
+        display: flex;
+        
+    }
+
+    .left {
+        width: 50%;
+        height: 100vh;
+    }
+    .right {
+        background-image: url(../img/side-image.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: left;
+        background-position-y: bottom;
+        width: 50%;
+    }
+
+    .form-container {
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    form {
+        padding: 5rem 11rem;
+        
+
+        background: var(--form-background);
+        border-radius: 4px;
+        
+    }
+
+}
+
+@media (min-width: 1400px) {
+    .form-container {
+        margin: 12.6rem auto;
+    } 
+        
+}
+
+
+
