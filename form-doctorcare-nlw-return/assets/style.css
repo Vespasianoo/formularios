@@ -2,7 +2,8 @@
 
 
 :root {
-    --brand-green: #00856F;
+    --hue: 170;
+    --brand-green: hsl(170, 100%, 26%);
     --brand-green-light: #DCE9E2;
     --brand-green-light-02: #F7F9F9;
     --brand-beige: #FFFAF1;
